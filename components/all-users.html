@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>All Users</title>
+    <link rel="stylesheet" href="./../css/bootstrap.min.css">
+    <link rel="stylesheet" href="./../components/all-users.css">
+  </head>
+  <body>
+    <div class="container mt-5" style="font-size: 0.8em">
+      <div class="d-inline-flex justify-content-around w-100">
+      <a id="newUser" class="btn btn-success mb-5 text-white" data-toggle="modal" data-target="#userForm">Create New User</a>
+      <a id="logout" class="btn btn-warning mb-5 text-white" data-toggle="modal" data-target="#userForm">Logout</a> 
+      </div>
+      <!--Dynamic users list-->
+      <div id="all-users">
+      </div>
+    </div>
+    <!--User form to create or update user-->
+    <div class="modal fade" id="userForm" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">User Form</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+              <div class="modal-body text-center mt-5 mb-5 ">
+                <div id="form-element">Name : <input type="text" id="name" name="name" ></div>
+                <div id="form-element">Email : <input type="email" id="email" name="email"></div>
+                <div id="form-element">Phone : <input id="phone" name="phone"></div>
+                <div id="form-element">Pincode : <input id="pincode" name="pincode"></div>             
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button id="save" class="btn btn-primary">Save</button>
+              </div>
+          </div>
+        </div>
+      </div>
+    <!-- jQuery CDN -->
+    <script type="text/javascript" src="./../js/jquery.min.js"></script>
+    <script type="text/javascript" src="./../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./../libs/verify-user.js"></script>
+    <script type="text/javascript" src="./../libs/route-guard.js"></script>
+	  <script type="text/javascript" src="./../components/all-users.js"></script>
+  </body>
+</html>
